@@ -325,10 +325,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    html{
-        max-width: 90%;
-    }
-
     .header {
         position: static;
     }

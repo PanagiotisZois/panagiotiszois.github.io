@@ -1,0 +1,512 @@
+body {
+    background-image: url('/images/background-image.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('/images/header.jpg');
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+nav ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: #a200ff;
+}
+
+
+main {
+    margin-top: 10%;
+    margin-left: 20%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.welcome .social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid purple;
+    border-radius: 50%;
+    box-shadow: 0;
+    transition: 10ms ease;            
+}
+
+.welcome .social-media a:hover{
+    background: purple;
+    color: white;
+}
+
+.welcome h1 {
+    font-size: 3rem;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s,
+        cursor .4s step-end infinite alternate;
+}
+
+.welcome p{
+    font-size: 1.6rem;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s,
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+
+    }
+}
+
+main .image {
+    max-width: 90%; 
+    margin-left: 5.5%;
+    margin-top: 8%;
+    width: 18rem;
+    height: 14rem;
+    border-radius: 50%;
+}
+
+.home .image-box{
+    background: linear-gradient(to right, #f3c5ff 20%, #db4aff 40%, #f701ff3e 50%, #1599e642 55%,#60a0c5 70%,transparent 100%);
+    background-size: 200% auto;
+    border-radius: 50%;
+    animation: shine 4s linear infinite;
+    width: 18rem;
+    height: 18rem;
+    margin-left: 20%;
+}
+
+/*Begin shimmer code*/
+@keyframes shine {
+    to {
+    background-position: 200% center;
+    }
+}
+
+.about-me .content{
+    margin-top: 10%;
+    margin-left: 17%;
+    margin-bottom: 15%;
+}
+
+.cap-html, .cap-css {
+    float: left;
+    width: 50%; /* Adjust width as needed */
+    margin-right: -40%;
+}
+
+.about-me .content .html-img{
+    width: 15%;
+}
+
+.about-me .content p{
+   font-size:x-large;
+   margin-left: 2.8%;
+}
+
+.about {
+    margin-top: 20%;
+    margin-left: 17%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.about h1, .about p {
+    font-size: 1.6rem;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s, cursor .4s step-end infinite alternate;
+}
+
+.about .content{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me .content .cap-html .html-section img{
+    width: 15%; 
+    margin-top: 2.5%;
+}
+
+.about-me .content .cap-css .css-section img{
+    width: 8%; 
+    margin-top: 0%;
+}
+
+.about-me .content .cap-css .css-section p{
+    font-size: xx-large; margin-top: 2%; margin-left: -0.1%;
+}
+
+.about-me .content .cap-css .javascript-section img{
+    width: 20%; 
+    margin-top: 0%;
+    margin-left: -6%;
+}
+
+.about-me .content .cap-css .javascript-section p{
+    margin-left: -4%;
+    margin-top: 3.2%;
+}
+
+.about-me .content .cap-css .php-section img{
+    width: 14%; 
+    margin-top: 1%;
+}
+
+.about-me .content .cap-css .java-section img{
+    height: 10%;
+    width: 25%; 
+    margin-top: -1%; 
+    margin-left: -5%;
+}
+
+.about-me .content .cap-css .java-section p{
+    margin-left: 2.5%; 
+    margin-top: 1.5%;
+}
+
+.about-me .content .cap-css .c-section img{
+    width: 10%; 
+    margin-top: -1%;
+    margin-left: 2%;
+}
+
+.about-me .content .cap-css .c-section p{
+    width: 10%; 
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.about-me .content .cap-css .mysql-section img{
+    width: 14%;
+    margin-top: -1%;
+    margin-left: 2%;
+}
+
+.about-me .content .cap-css .mysql-section p{
+    margin-top: 0%;
+}
+
+.about-me .content .cap-css .postgree-section img{
+    width: 15%; 
+    margin-top: -3%;
+    margin-left: 5%;
+}
+
+.about-me .content .cap-css .postgree-section p{
+    margin-left: 3%; margin-top: 1%;
+}
+
+.about .button {
+    border-radius: 4px;
+    background-color: #db4aff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.about .button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.about .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.about .button:hover span {
+    padding-right: 25px;
+}
+
+.about .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.about .image-box {
+    background: linear-gradient(to right, #f3c5ff 20%, #db4aff 40%, #f701ff3e 50%, #1599e642 55%,#60a0c5 70%,transparent 100%);
+    background-size: 200% auto;
+    border-radius: 50%;
+    animation: shine 8s linear infinite;
+    width: 12rem;
+    height: 12rem;
+    margin-left: 10%;
+}
+
+.about .about-image{
+    width: 150px;
+    height: 150px;
+    margin-left: 13%;
+    margin-top: 8%
+}
+
+footer {
+    margin-top: 5%;
+    background-image: url('/images/header.jpg');
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: static;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome{
+        margin-left: -25%;
+    }
+
+    .welcome h1, .welcome p {
+        font-size: 2rem;
+    }
+
+    .welcome .social-media a {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .home .image-box{
+        background: linear-gradient(to right, #f3c5ff 20%, #db4aff 40%, #f701ff3e 50%, #1599e642 55%,#60a0c5 70%,transparent 100%);
+        background-size: 200% auto;
+        border-radius: 50%;
+        animation: shine 4s linear infinite;
+        width: 18rem;
+        height: 18rem;
+        margin-left: -25%;
+        margin-top: 10%;
+    }
+
+    .about-me .content{
+        font-size: large;
+        margin-left: 20%;
+        display: grid;
+    }
+
+    .about-me .content h1{
+        width: 30%;
+        margin-left: -15%;
+        font-size: x-large;
+    }
+
+    .about-me .content p{
+        width: 30%;
+        font-size: larger;
+    }
+
+    .cap-html, .cap-css {
+        width: 80%; /* Adjust width as needed */
+        margin-right: -20%;
+        float: none;
+        width: 100%;
+    }
+
+    .about-me .content .cap-html .html-section img{
+        width: 35%; 
+        margin-top: 2.5%;
+    }
+
+    .about-me .content .cap-html .html-section p{
+        margin-left: 8%;
+        margin-top: 2.5%;
+    }
+    
+    .about-me .content .cap-css .css-section img{
+        width: 18%; 
+        margin-top: 0%;
+        margin-left: 8%;
+    }
+    
+    .about-me .content .cap-css .css-section p{
+        font-size: xx-large;
+        margin-top: 2%; 
+        margin-left: 8%;
+    }
+    
+    .about-me .content .cap-css .javascript-section img{
+        width: 40%; 
+        margin-top: 0%;
+        margin-left: -3%;
+    }
+    
+    .about-me .content .cap-css .javascript-section p{
+        margin-top: 3.2%;
+        margin-left: 2%;
+    }
+    
+    .about-me .content .cap-css .php-section img{
+        width: 25%; 
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+
+    .about-me .content .cap-css .php-section p{
+        width: 25%; 
+        margin-top: 1%;
+        margin-left: 10%;
+    }
+    
+    .about-me .content .cap-css .java-section img{
+        height: 10%;
+        width: 45%; 
+        margin-top: -1%; 
+        margin-left: -5%;
+    }
+    
+    .about-me .content .cap-css .java-section p{
+        margin-left: 8%; 
+        margin-top: 1.5%;
+    }
+    
+    .about-me .content .cap-css .c-section img{
+        width: 15%; 
+        margin-top: -1%;
+        margin-left: 8%;
+    }
+    
+    .about-me .content .cap-css .c-section p{
+        width: 10%; 
+        margin-top: 4%;
+        margin-left: 13%;
+    }
+    
+    .about-me .content .cap-css .mysql-section img{
+        width: 14%;
+        margin-top: -1%;
+        margin-left: 10%;
+    }
+    
+    .about-me .content .cap-css .mysql-section p{
+        margin-top: 0%;
+        margin-left: 6%;
+    }
+    
+    .about-me .content .cap-css .postgree-section img{
+        width: 25%; 
+        margin-top: -3%;
+        margin-left: 5%;
+    }
+    
+    .about-me .content .cap-css .postgree-section p{
+        margin-left: -3%; 
+        margin-top: 1%;
+    }
+
+    .about {
+        margin-top: 5%;
+        margin-left: 0;
+        padding: 1rem;
+        display: grid;
+        align-items: center;
+    }
+
+    .about h1{
+        font-size: large;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+
+    .about .button {
+        font-size: 1.4rem;
+        margin-left: 14%;
+        margin-left: 20%;
+    }
+
+    .about .image-box {
+        width: 8rem;
+        height: 8rem;
+        margin-left: 30%;
+        margin-top: 8%;
+    }
+
+    .about .about-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer .contact{
+        margin-left: 20%;
+    }
+}
